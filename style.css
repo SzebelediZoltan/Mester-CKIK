@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+:root {
+    --elsodleges: #92CAFF;
+    --masodlagos: #C0D6FF;
+    --feher_kek: #E2F3FF;
+    --zold: #18A615;
+    --feher_zold: #AFFFB7;
+    --feher: #F5FAFF;
+    --fekete: #161B26;
+    --szurke: #D9D9D9;
+    --linkek: #4faaff;
+    --linkek-hover: #387ab8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    overflow: hidden;
+}
+
+main {
+    background: linear-gradient(to right bottom, var(--feher_kek) 30%, var(--elsodleges) 100%);
+    height: 100vh;
+}
+
+/* AUTH */
+
+.auth-main {
+    background-color: var(--feher);
+    width: fit-content;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 4%;
+    box-shadow: rgba(0, 0, 0, 0.25) 7px 7px 10px;
+    padding: 0 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20vw;
+    z-index: 0;
+}
+
+.auth-logo {
+    padding: 2.5vh 0;
+    pointer-events: none;
+}
+
+.auth-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vh;
+    width: 100%;
+}
+
+.auth-input p {
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.auth-input div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.auth-input div span {
+    background-color: var(--szurke);
+    height: 100%;
+    padding: 0.72vh;
+    border-radius: 5px;
+    transition: all 0.1s;
+    cursor: pointer;
+}
+
+.auth-input div span:hover {
+    background-color: #929292;
+    transform: scale(110%);
+}
+
+.auth-input input {
+    width: 100%;
+    height: 4vh;
+    border: none;
+    background-color: var(--szurke);
+    border-radius: 5px;
+    padding: 0 2%;
+}
+
+.auth-inputs a {
+    color: var(--linkek);
+}
+
+.auth-inputs a:hover{
+    color: var(--linkek-hover);
+}
+
+.auth-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 7vh 0;
+    width: 50%;
+}
+
+.auth-btn {
+    border: var(--elsodleges) 3px solid;
+    border-radius: 15px;
+    font-size: 1.5em;
+    padding: 3% 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.auth-belepes {
+    background-color: var(--elsodleges);
+}
+
+.auth-regisztracio {
+    color: var(--elsodleges);
+}
+
+/* ANIM */
+
+@keyframes belepes {
+    from{opacity: 0;}
+    to{opacity: 1;}
+    
+}
+
+.white-screen {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--feher);
+    z-index: 1;
+    transition: all 1s;
+    pointer-events: none;
+    opacity: 0;
+    /* animation: belepes 2s forwards; */
+}
+
+.white-screen img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(150%);
+}
+
+
