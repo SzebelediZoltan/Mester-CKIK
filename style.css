@@ -145,7 +145,6 @@ main {
     transition: all 1s;
     pointer-events: none;
     opacity: 0;
-    /* animation: belepes 2s forwards; */
 }
 
 .white-screen img {
@@ -155,4 +154,7 @@ main {
     transform: translate(-50%, -50%) scale(150%);
 }
 
+.piros {
+    color: rgb(255, 115, 115);
+}
 
