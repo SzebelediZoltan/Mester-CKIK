@@ -1,28 +1,56 @@
-passVis = document.querySelectorAll(".vis")[0]
-jelInp = document.querySelectorAll(".jel-input")[0]
+const passVis = document.querySelectorAll(".vis")
+const jelInp = document.querySelectorAll(".jel-input")
 
-passVis.addEventListener("click", () => {
-    if (jelInp.type == "password") {
-        jelInp.type = "text"
-        passVis.innerText = "visibility_off"
-    } else {
-        jelInp.type = "password"
-        passVis.innerText = "visibility"
-    }
-})
+passVis.forEach(passVisF)
 
-belepes = document.querySelectorAll(".auth-belepes")[0]
-whiteS = document.querySelectorAll(".white-screen")[0]
-hiba = 0
+function passVisF(item, index) {
+    passVis[index].addEventListener("click", () => {
+        if (jelInp[index].type == "password") {
+            jelInp[index].type = "text"
+            passVis[index].innerText = "visibility_off"
+        } else {
+            jelInp[index].type = "password"
+            passVis[index].innerText = "visibility"
+        }
+    })
+}
+
+const belepes = document.querySelectorAll(".auth-belepes")[0]
+const whiteS = document.querySelectorAll(".white-screen")[0]
+let hiba = 0
 
 belepes.addEventListener("click", () => {
-    if (document.querySelectorAll(".fel-input")[0].value.length < 10){
-        if (hiba == 0) {
-            hiba = 1
-            document.querySelectorAll(".felhasznalonev")[0].innerHTML += "<p class='piros'>Rövid felhsználónév</p>"
-        }
-    } else {
-        whiteS.style.animation = "belepes 2s forwards"
-    }
-    // animation: belepes 2s forwards;
+    whiteS.style.animation = "belepes 2s forwards"
+    setTimeout(() => {
+        document.location.href = "./asd.html";
+    }, 2000)
 })
+
+const regisztracio = document.querySelectorAll(".auth-regisztracio")[0]
+const elfelejtett = document.querySelectorAll(".elfelejtett")[0]
+const authInputs = document.querySelectorAll(".auth-inputs")[0]
+const authBtns = document.querySelectorAll(".auth-btns")[0]
+const jelszou = document.querySelectorAll(".jelszou")[0]
+const logo = document.querySelectorAll(".auth-logo")[0]
+const sikeres = document.querySelectorAll(".sikeres")[0]
+const maina = document.querySelectorAll(".main")[0]
+
+regisztracio.addEventListener("click", () => {
+    elfelejtett.style.position = "absolute"
+    elfelejtett.style.opacity = "0"
+    elfelejtett.style.pointerEvents = "none"
+    jelszou.style.position = "static"
+    jelszou.style.animation = "becsuszas 1s forwards"
+    belepes.style.display = "none"
+    belepes.style.position = "absolute"
+    regisztracio.style.border = "solid 3px var(--elsodleges)"
+    regisztracio.style.backgroundColor = "var(--elsodleges)"
+    regisztracio.style.color = "black"
+    regisztracio.addEventListener("click", () => {
+        sikeres.style.opacity = "1"
+        logo.style.animation = "logocsusztatas 0.7s forwards"
+        authInputs.style.opacity = "0"
+        authBtns.style.opacity = "0"
+    })
+})
+

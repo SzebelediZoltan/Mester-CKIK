@@ -24,7 +24,7 @@ body {
     overflow: hidden;
 }
 
-main {
+.main {
     background: linear-gradient(to right bottom, var(--feher_kek) 30%, var(--elsodleges) 100%);
     height: 100vh;
 }
@@ -46,11 +46,13 @@ main {
     align-items: center;
     width: 20vw;
     z-index: 0;
+    overflow: hidden;
 }
 
 .auth-logo {
     padding: 2.5vh 0;
     pointer-events: none;
+    transition: all 0.7s;
 }
 
 .auth-inputs {
@@ -95,6 +97,17 @@ main {
     padding: 0 2%;
 }
 
+.jelszou {
+    transform: translate(120%, 0);
+    position: absolute;
+    top: 100%;
+}
+
+@keyframes becsuszas {
+    from{transform: translate(120%, 0);}
+    to{transform: translate(0, 0);}
+}
+
 .auth-inputs a {
     color: var(--linkek);
 }
@@ -103,18 +116,22 @@ main {
     color: var(--linkek-hover);
 }
 
+.jelszo a {
+    transition: all 2s;
+}
+
 .auth-btns {
     display: flex;
     flex-direction: column;
     gap: 20px;
     margin: 7vh 0;
-    width: 50%;
+    width: 60%;
 }
 
 .auth-btn {
-    border: var(--elsodleges) 3px solid;
+    border: var(--elsodleges) 4px solid;
     border-radius: 15px;
-    font-size: 1.5em;
+    font-size: 1.3em;
     padding: 3% 0;
     background-color: transparent;
     cursor: pointer;
@@ -122,11 +139,30 @@ main {
 
 .auth-belepes {
     background-color: var(--elsodleges);
+    transition: all 1s;
 }
 
 .auth-regisztracio {
     color: var(--elsodleges);
+    transition: all 0.7s;
 }
+
+.sikeres {
+    position: absolute;
+    top: 57%;
+    color: var(--zold);
+    transition: all 0.7s;
+    opacity: 0;
+    pointer-events: none;
+}
+
+@keyframes logocsusztatas {
+    from {}
+    to {
+        transform: translate(0, 140%);
+    }
+}
+
 
 /* ANIM */
 
@@ -156,5 +192,24 @@ main {
 
 .piros {
     color: rgb(255, 115, 115);
+}
+
+.white-screen2 {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--feher);
+    z-index: 1;
+    transition: all 1s;
+    pointer-events: none;
+    opacity: 1;
+    animation: belepes 2s forwards reverse;
+}
+
+.white-screen2 img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(150%);
 }
 

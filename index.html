@@ -9,7 +9,7 @@
     <title>CKIK X Mester</title>
 </head>
 <body>
-    <main>
+    <main class="main">
         <div class="auth-main">
             <img src="./assets/logo/logo.svg" alt="LOGO" class="auth-logo">
             <div class="auth-inputs">
@@ -31,18 +31,28 @@
                         <input type="password" class="jel-input" value="">
                         <span class="material-symbols-rounded vis">visibility</span>
                     </div>
-                    <a href="#">Elfelejtettem a jelszavam...</a>
+                    <a href="#" class="elfelejtett">Elfelejtettem a jelszavam...</a>
+                </div>
+                <div class="auth-input jelszou">
+                    <p>
+                        <span class="material-symbols-rounded">key</span>
+                        Jelszó újra
+                    </p>
+                    <div>
+                        <input type="password" class="jel-input" value="">
+                        <span class="material-symbols-rounded vis">visibility</span>
+                    </div>
                 </div>
             </div>
             <div class="auth-btns">
                 <button class="auth-btn auth-belepes">Belépés</button>
                 <button class="auth-btn auth-regisztracio">Regisztrálás</button>
             </div>
+            <p class="sikeres">Sikeres regisztráció! </p>
         </div>
         <section class="white-screen">
             <img src="./assets/logo/logo.svg" alt="">
         </section>
-
     </main>
     <script src="./main.js"></script>
 </body>
