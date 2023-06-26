@@ -33,7 +33,7 @@ const authBtns = document.querySelectorAll(".auth-btns")[0]
 const jelszou = document.querySelectorAll(".jelszou")[0]
 const logo = document.querySelectorAll(".auth-logo")[0]
 const sikeres = document.querySelectorAll(".sikeres")[0]
-const maina = document.querySelectorAll(".main")[0]
+const maina = document.querySelectorAll(".auth-main")[0]
 
 regisztracio.addEventListener("click", () => {
     elfelejtett.style.position = "absolute"
@@ -50,7 +50,10 @@ regisztracio.addEventListener("click", () => {
         sikeres.style.opacity = "1"
         logo.style.animation = "logocsusztatas 0.7s forwards"
         authInputs.style.opacity = "0"
+        authInputs.style.pointerEvents = "None"
         authBtns.style.opacity = "0"
+        authBtns.style.pointerEvents = "None"
+        maina.style.boxShadow = "rgba(var(--zold-asd), 0.75) 0px 0px 30px"
     })
 })
 
