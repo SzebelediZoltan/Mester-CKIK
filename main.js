@@ -1,9 +1,7 @@
 const passVis = document.querySelectorAll(".vis")
 const jelInp = document.querySelectorAll(".jel-input")
 
-passVis.forEach(passVisF)
-
-function passVisF(item, index) {
+passVis.forEach((item, index) => {
     passVis[index].addEventListener("click", () => {
         if (jelInp[index].type == "password") {
             jelInp[index].type = "text"
@@ -13,7 +11,8 @@ function passVisF(item, index) {
             passVis[index].innerText = "visibility"
         }
     })
-}
+})
+
 
 // -----
 
