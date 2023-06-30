@@ -45,7 +45,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 20vw;
+    min-width: 384px;
     z-index: 0;
     overflow: hidden;
     transition: all 1s;
@@ -76,7 +76,7 @@ body {
     gap: 10px;
 }
 
-.auth-input div span {
+.vis {
     background-color: var(--szurke);
     height: 100%;
     padding: 0.72vh;
@@ -85,7 +85,7 @@ body {
     cursor: pointer;
 }
 
-.auth-input div span:hover {
+.vis:hover {
     background-color: #929292;
     transform: scale(110%);
 }

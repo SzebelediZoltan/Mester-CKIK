@@ -15,6 +15,8 @@ function passVisF(item, index) {
     })
 }
 
+// -----
+
 const belepes = document.querySelectorAll(".auth-belepes")[0]
 const whiteS = document.querySelectorAll(".white-screen")[0]
 let hiba = 0
