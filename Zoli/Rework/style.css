@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+:root {
+    --fekete: 11, 0, 20;
+    --kek: 151, 193, 255;
+    --dark: 36, 7, 60;
+    --light: 107, 0, 190;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background:linear-gradient(to bottom right, rgb(var(--fekete)) 38%, rgb(var(--dark)));
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.auth-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(74, 74, 74, 0.3);
+    min-width: 384px;
+    height: 74vh;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 7px;   
+    gap: 2%; 
+}
+
+.logo {
+    width: 16.5%;
+}
+
+.auth-inputs {
+    width: 100%;
+    color: white;
+}
+
+.auth-inputs:nth-child(1) {
+    margin-bottom: 20%;
+}
+
+.auth-inputs p {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    padding: 0 0 0 3px;
+}
+
+
+
